@@ -1,7 +1,23 @@
 from django.db import models
 
 from wagtail.core.models import Page
-
+from wagtail.admin.edit_handlers import FieldPanel
 
 class HomePage(Page):
-    pass
+    hero_title = models.CharField(
+        max_length=120,
+        blank=True,
+        help_text="Main text displayed in the hero section over the background."
+    )
+
+    hero_subtitle = models.TextField(
+        max_length=200,
+        blank=True,
+        help_text="Subtitle following the main title in the hero section."
+    )
+
+    content_panels = Page.content_panels + [
+        FieldPanel("hero_title"),
+        FieldPanel("hero_subtitle"),
+    ] 
+
