@@ -151,6 +151,6 @@ dmypy.json
 .prof
 
 # Wagtail stuff
-settings/
+*/settings
 
 # End of https://www.toptal.com/developers/gitignore/api/django
