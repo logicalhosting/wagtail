@@ -153,4 +153,7 @@ dmypy.json
 # Wagtail stuff
 settings/
 
+# NPM stuff
+node_modules
+
 # End of https://www.toptal.com/developers/gitignore/api/django
