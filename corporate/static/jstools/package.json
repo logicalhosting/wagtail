@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.2.5",
     "clean-css-cli": "^5.2.1",
     "tailwindcss": "^2.0.3"
