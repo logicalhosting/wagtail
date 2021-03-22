@@ -29,6 +29,11 @@
         href="{% static 'css/corporate.css' %}"
         type="text/css"
         />
+        <link 
+        rel="stylesheet" 
+        href="https://rsms.me/inter/inter.css"
+        />
+
         {% block extra_css %}
 
         {% endblock %}
@@ -41,7 +46,6 @@
         {% block content %}{% endblock %}
 
         {# Global javascript #}
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous" defer></script>
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
         {% endblock %}
