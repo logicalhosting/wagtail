@@ -19,20 +19,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
-        <link
-        rel="stylesheet"
-        href="{% static 'css/style.css' %}"
-        type="text/css"
-        />
-        <link
-        rel="stylesheet"
-        href="{% static 'css/corporate.css' %}"
-        type="text/css"
-        />
-        <link 
-        rel="stylesheet" 
-        href="https://rsms.me/inter/inter.css"
-        />
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'css/corporate.css' %}"type="text/css" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer></script>
 
         {% block extra_css %}
 
@@ -41,10 +31,10 @@
 
     <body class="{% block body_class %}{% endblock %}">
         {% include "includes/navbar.html" %}
-        {% wagtailuserbar %}
-
+        {% include "includes/hero.html" %}
+        {% wagtailuserbar %}      
         {% block content %}{% endblock %}
-
+        {% include "includes/footer.html" %}
         {# Global javascript #}
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}

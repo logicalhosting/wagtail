@@ -14,9 +14,13 @@
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.4.0",
-    "autoprefixer": "^10.2.5",
     "clean-css-cli": "^5.2.1",
-    "tailwind": "^4.0.0",
-    "tailwindcss": "^2.0.3"
+    "tailwind": "^4.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/jit": "^0.1.9",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "tailwindcss": "^2.0.4"
   }
 }
