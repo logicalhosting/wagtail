@@ -711,8 +711,8 @@ video {
 .h-full {
 	height: 100%;
 }
-.h-8 {
-	height: 2rem;
+.h-11 {
+	height: 2.75rem;
 }
 .h-5 {
 	height: 1.25rem;
@@ -722,6 +722,9 @@ video {
 }
 .h-20 {
 	height: 5rem;
+}
+.h-8 {
+	height: 2rem;
 }
 .h-12 {
 	height: 3rem;
@@ -1163,10 +1166,6 @@ video {
 
 	.sm\:grid {
 		display: grid;
-	}
-
-	.sm\:h-10 {
-		height: 2.5rem;
 	}
 
 	.sm\:h-12 {
