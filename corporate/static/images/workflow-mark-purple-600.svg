@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 758.16 880.409" width="512" height="512">
+  <defs>
+    <path d="M757.91 218.6L379.39 438v442l144.95-83.93 233.57-134.7V218.6z" id="a"/>
+    <path d="M757.91 380.13l-234.9 141.64 1.86 170.69 182-101.28v29.32l-182 103.98-.53 71.58 233.57-134.7v-164.8L575.45 601.49v-34.66L757.9 457.91l.01-77.78z" id="b"/>
+    <path d="M757.91 218.6L379.39 438v442l144.95-83.93.53-274.29 233.04-141.65V218.6z" id="c"/>
+    <path d="M379.39 0L.09 216.98l138.07 80.42L379.39 438l246.52-142.88 132-76.53L379.39 0z" id="d"/>
+    <path d="M.09 216.98v442l.13.07-.13 1.93L379.39 880l1.3-140-1.3-302-241.23-140.6L.09 216.98z" id="e"/>
+    <path d="M379.39 0L.09 216.98l138.07 80.42 241.19-146.13 246.56 143.85 132-76.53L379.39 0z" id="f"/>
+    <path d="M.09 216.98v442l.13.07-.13 1.93L379.39 880l1.3-140-245.64-145.92 3.11-296.68L.09 216.98z" id="g"/>
+  </defs>
+  <use xlink:href="#a" fill="#f9fafb"/>
+  <use xlink:href="#a" fill-opacity="0" stroke="#000" stroke-width="0" stroke-opacity="0"/>
+  <use xlink:href="#b" fill="#6b7280"/>
+  <use xlink:href="#b" fill-opacity="0" stroke="#000" stroke-opacity="0"/>
+  <use xlink:href="#c" fill="#8b5cf6"/>
+  <use xlink:href="#c" fill-opacity="0" stroke="#000" stroke-width="0" stroke-opacity="0"/>
+  <use xlink:href="#d" fill="#f3f4f6"/>
+  <use xlink:href="#d" fill-opacity="0" stroke="#000" stroke-width="0" stroke-opacity="0"/>
+  <g>
+    <use xlink:href="#e" fill="#e5e7eb"/>
+    <use xlink:href="#e" fill-opacity="0" stroke="#000" stroke-width="0" stroke-opacity="0"/>
+  </g>
+  <g>
+    <use xlink:href="#f" fill="#6d28d9"/>
+    <use xlink:href="#f" fill-opacity="0" stroke="#000" stroke-width="0" stroke-opacity="0"/>
+  </g>
+  <g>
+    <use xlink:href="#g" fill="#4b5563"/>
+    <use xlink:href="#g" fill-opacity="0" stroke="#000" stroke-width="0" stroke-opacity="0"/>
+  </g>
+</svg>
