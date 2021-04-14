@@ -33,3 +33,4 @@ class NewsItem(AbstractNewsItem):
 
 class NewsItemRevision(AbstractNewsItemRevision):
     newsitem = models.ForeignKey(NewsItem, related_name='revisions', on_delete=models.CASCADE)
+
