@@ -15,7 +15,7 @@ urlpatterns = [
     path('documents/', include(wagtaildocs_urls)),
 
     path('search/', search_views.search, name='search'),
-    #path('blog/', include('blog.urls', namespace="blog")),
+    # path('news/', news.urls, namespace="news"),
 ]
 
 
