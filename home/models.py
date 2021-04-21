@@ -17,7 +17,7 @@ class HomePage(Page):
     )
 
     cta_btn_text = models.CharField(
-        max_length=20,
+        max_length=64,
         blank=True,
         default="Learn More",
         help_text="Call-To-Action Button Text",

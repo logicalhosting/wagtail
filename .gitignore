@@ -159,3 +159,6 @@ node_modules
 # End of https://www.toptal.com/developers/gitignore/api/django
 logical.wagtail.test.pem
 logical.wagtail.test-key.pem
+
+# Google Cloud
+*.json
