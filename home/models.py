@@ -1,7 +1,13 @@
 from django.db import models
 
 from wagtail.core.models import Page
-from wagtail.admin.edit_handlers import FieldPanel, PageChooserPanel
+from wagtail.core import blocks
+from wagtail.core import fields
+from wagtail.embeds.blocks import EmbedBlock
+from wagtail.images.blocks import ImageChooserBlock
+from wagtail.admin.edit_handlers import FieldPanel, PageChooserPanel, StreamFieldPanel
+
+from wagtailcolumnblocks.blocks import ColumnsBlock
 
 class HomePage(Page):
     hero_title = models.CharField(
@@ -39,4 +45,38 @@ class HomePage(Page):
         PageChooserPanel("cta_btn_link"),
     ] 
 
+class LpContentBlocks(blocks.StreamBlock):
+    """
+    The blocks you want to allow within each MyColumnBlocks column.
+    """
+
+    image = ImageChooserBlock()
+    text = blocks.CharBlock()
+
+
+class LpColumnBlocks(blocks.StreamBlock):
+    """
+    All the root level blocks you can use
+    """
+    column_2_1 = ColumnsBlock(
+        # Blocks you want to allow within each column
+        LpContentBlocks(),
+        # Two columns in admin, first twice as wide as the second
+        ratios=(1, 1),
+        # Used for grouping related fields in the streamfield field picker
+        group="Columns",
+        # 12 column frontend grid (this is the default, so can be omitted)
+        grid_width=12,
+        # Override the frontend template
+        template='blocks/two_column_block.html',
+    )
+
+
+class SidebarPage(Page):
+    content = fields.StreamField(LpColumnBlocks)
+
+    content_panels = [
+        FieldPanel('title'),
+        StreamFieldPanel('content')
+    ]
 

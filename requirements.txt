@@ -4,4 +4,5 @@ django-tailwind>=1.1.2,<1.2
 django-redis>=4.12.1,<4.13
 psycopg2>=2.8.6,<2.9.0
 django-storages[google]>=1.11.1,<1.12
-wagtailsvg>-0.0.14,<0.1
+wagtailsvg>=0.0.14,<0.1
+wagtailcolumnblocks>=2.2.0,<2.3
