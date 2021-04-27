@@ -45,6 +45,7 @@ class HomePage(Page):
         PageChooserPanel("cta_btn_link"),
     ] 
 
+
 class LpContentBlocks(blocks.StreamBlock):
     """
     The blocks you want to allow within each MyColumnBlocks column.
