@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1134.255" height="318.947" viewBox="0 0 293.915 82.647">
+  <defs>
+    <path id="b" d="M97.666 54.619h232.363v28.032H97.666z"/>
+    <path id="a" d="M99.981 12.035h193.944v30.087H99.981z"/>
+    <path id="c" d="M99.981 12.035h193.944v30.087H99.981z"/>
+    <path id="d" d="M97.666 54.619h232.363v28.032H97.666z"/>
+  </defs>
+  <g font-family="Inter V">
+    <text style="line-height:1.25;-inkscape-font-specification:'Inter V Medium';white-space:pre;shape-inside:url(#c)" transform="matrix(1.19137 0 0 1.19137 -20.55 -6.7)" font-weight="500" font-size="24.876">
+      <tspan x="99.98" y="35.117"><tspan style="-inkscape-font-specification:'Inter V, @wght=500';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 500" font-weight="400" font-size="24.94">Logical Phase</tspan></tspan>
+    </text>
+    <text style="line-height:1.25;-inkscape-font-specification:'Inter V, @wght=500';font-variation-settings:'wght' 500;white-space:pre;shape-inside:url(#d)" transform="translate(3.527 -3.628)" font-size="16.584" letter-spacing="20.73" fill="#6d28d9">
+      <tspan x="97.666" y="69.967"><tspan style="-inkscape-font-specification:'Inter V, @wght=600';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 600" font-weight="400">systems</tspan></tspan>
+    </text>
+  </g>
+  <g clip-path="url(#clip105)" transform="translate(-493.399 -383.891)" fill="#6d28d9" stroke-linecap="square" stroke-miterlimit="10">
+    <g fill-rule="evenodd"/>
+  </g>
+  <g clip-path="url(#clip105)" transform="translate(-493.399 -383.891)" fill="#6d28d9" stroke-linecap="square" stroke-miterlimit="10">
+    <g fill-rule="evenodd"/>
+  </g>
+  <g clip-path="url(#clip105)" transform="matrix(.36 0 0 .17331 -200.71 -36.29)" fill="#f9fafb" stroke-width="0" stroke-linecap="square">
+    <g fill-rule="evenodd">
+      <path d="M754.71 328.593L656.58 446.74v238.014l37.578-45.199 60.552-72.535V415.578z"/>
+    </g>
+  </g>
+  <path d="M70.985 35.736l-21.923 13.22.174 15.93 16.985-9.453v2.737l-16.985 9.704-.05 6.68 21.799-12.57V46.601l-17.029 9.793v-3.234l17.029-10.166z" fill="#6b7280"/>
+  <g clip-path="url(#clip105)" transform="matrix(.36 0 0 .17331 -200.71 -36.29)" fill="#8b5cf6" stroke-width="0" stroke-linecap="square">
+    <g fill-rule="evenodd">
+      <path d="M754.71 328.593L656.58 446.74v238.014l37.578-45.199.138-147.703 60.414-76.275z"/>
+    </g>
+  </g>
+  <g clip-path="url(#clip106)" transform="matrix(.36 0 0 .36 -200.71 -97.672)" fill="#f3f4f6" stroke-width="0" stroke-linecap="square">
+    <g fill-rule="evenodd">
+      <path d="M656.58 272.03l-98.33 56.252 35.794 20.848 62.536 36.45 63.91-37.04 34.22-19.84z"/>
+    </g>
+  </g>
+  <g clip-path="url(#clip104)" transform="matrix(.36 0 0 .36 -200.71 -97.672)" fill="#e5e7eb" stroke-width="0" stroke-linecap="square">
+    <g fill-rule="evenodd">
+      <path d="M558.25 328.282v114.586l.032.018-.032.5 98.33 56.78.337-36.294-.337-78.292-62.536-36.45z"/>
+    </g>
+  </g>
+  <g clip-path="url(#clip106)" transform="matrix(.36 0 0 .36 -200.71 -97.672)" fill="#6d28d9" stroke-width="0" stroke-linecap="square">
+    <g fill-rule="evenodd">
+      <path d="M656.58 272.03l-98.33 56.252 35.794 20.848 62.526-37.883 63.92 37.293 34.22-19.84z"/>
+    </g>
+  </g>
+  <g clip-path="url(#clip104)" transform="matrix(.36 0 0 .36 -200.71 -97.672)" fill="#4b5563" stroke-width="0" stroke-linecap="square">
+    <g fill-rule="evenodd">
+      <path d="M558.25 328.282v114.586l.032.018-.032.5 98.33 56.78.337-36.294-63.68-37.83.807-76.912z"/>
+    </g>
+  </g>
+</svg>
