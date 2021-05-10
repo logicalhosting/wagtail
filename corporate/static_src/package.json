@@ -4,7 +4,26 @@
   "keywords": [],
   "author": "@logicalphase",
   "license": "Apache",
+  "scripts": {
+    "start": "webpack serve"
+  },
   "dependencies": {
-    "material-components-web": "^11.0.0"
+    "@material/animation": "^11.0.0",
+    "@material/button": "^11.0.0",
+    "@material/card": "^11.0.0",
+    "@material/ripple": "^11.0.0",
+    "@material/textfield": "^11.0.0",
+    "@material/top-app-bar": "^11.0.0",
+    "@material/typography": "^11.0.0"
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.4",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }

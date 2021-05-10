@@ -1,5 +1,6 @@
-import '@material/mwc-button/index';
-import '@material/mwc-card/index';
-import '@material/mwc-textfield';
-import '@material/mwc-top-app-bar/index';
-import '@material/mwc-typography/index';
+import '@material/button';
+import '@material/card';
+import '@material/textfield';
+import '@material/top-app-bar';
+import '@material/typography';
+import '@material/ripple';
