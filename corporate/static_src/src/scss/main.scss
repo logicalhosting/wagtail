@@ -1,0 +1,33 @@
+
+
+@use "@material/button/styles" as a-style;
+@use "@material/card";
+@use "@material/checkbox";
+
+@use "@material/chips/chip";
+@use "@material/data-table/data-table";
+@use "@material/fab";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/icon-button"; 
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/list/mdc-list"; 
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/radio/styles" as b-style;
+@use "@material/tab-bar/mdc-tab-bar";
+@use "@material/tab-scroller/mdc-tab-scroller";
+@use "@material/tab-indicator/mdc-tab-indicator";
+@use "@material/tab/mdc-tab";
+@use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/textfield";
+@use "@material/typography/mdc-typography";
+@use "@material/form-field";
+
+@include card.core-styles;
+@include checkbox.core-styles;
+@include data-table.core-styles;
+@include data-table.theme-baseline;
+@include fab.core-styles;
+@include form-field.core-styles;
+@include icon-button.core-styles;
+//@include list.core-styles;
+@include textfield.core-styles;

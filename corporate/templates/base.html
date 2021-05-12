@@ -21,7 +21,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         {# Global stylesheets #}
-        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" />
+         <link rel="stylesheet" type="text/css" href="{% static 'css/bundle.css' %}">
         {# Global javascript #}
         <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
@@ -67,11 +67,16 @@
         {% block extra_js %}
      <!-- at the bottom of the page -->
         <script>
+        const buttons = document.querySelectorAll('.mdc-button');
+        for (const button of buttons) {   
+            mdc.ripple.MDCRipple.attachTo(button);
+        };
+        const fabs = document.querySelectorAll('.mdc-fab');
+        for (const fab of fabs) {   
+            mdc.ripple.MDCRipple.attachTo(fab);
+        };
         window.mdc.autoInit();
-
-        const button = document.querySelector('.lps-button');
-        mdc.ripple.MDCRipple.attachTo(button);
         </script> 
         {% endblock %}
     </body>
-</html>
+</html>mdc-fab 
