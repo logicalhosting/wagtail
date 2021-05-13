@@ -19,7 +19,14 @@ module.exports = {
                     {
                         loader: 'postcss-loader',
                         options: {
-                          postcssOptions: () => [autoprefixer()]
+                          postcssOptions: {
+                            
+                            plugins: [
+                                require('cssnano')({
+                                    preset: 'default',
+                                }),
+                            ],
+                          }
                         }
                     },
                     {
