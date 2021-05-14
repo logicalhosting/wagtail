@@ -75,7 +75,6 @@ class LpColumnBlocks(blocks.StreamBlock):
 
 class SidebarPage(Page):
     content = fields.StreamField(LpColumnBlocks)
-
     content_panels = [
         FieldPanel('title'),
         StreamFieldPanel('content')

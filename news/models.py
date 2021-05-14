@@ -15,7 +15,7 @@ from wagtailsvg.models import Svg
 from wagtailsvg.blocks import SvgChooserBlock
 from wagtailsvg.edit_handlers import SvgChooserPanel
 
-from core.blocks import PersonBlock
+from core.blocks import PersonBlock, ButtonBlock
 
 
 # The decorator registers this model as a news index
@@ -40,6 +40,7 @@ class NewsItem(AbstractNewsItem):
         ('svg', SvgChooserBlock()),
         ('image', ImageChooserBlock()),
         ('embed', EmbedBlock()),
+        ('button', ButtonBlock()),
     ], blank=True)
     author = StreamField([
         ('author', PersonBlock()),
