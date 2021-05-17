@@ -156,9 +156,9 @@ settings/
 # NPM stuff
 node_modules
 
-# End of https://www.toptal.com/developers/gitignore/api/django
-logical.wagtail.test.pem
-logical.wagtail.test-key.pem
-
 # Google Cloud
 *.json
+
+# Security - End of https://www.toptal.com/developers/gitignore/api/django
+dev.logicalphase.com.crt
+dev.logicalphase.com.key
