@@ -45,4 +45,4 @@ class ButtonBlock(StructBlock):
 
     class Meta:
         template = 'blocks/button_block.html'
-        icon = 'user'
+        icon = 'doc-full'
