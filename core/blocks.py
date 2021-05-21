@@ -11,6 +11,7 @@ from wagtail.core.blocks import (
     StreamBlock,
     StructBlock,
     ChoiceBlock,
+    URLBlock,
 )
 from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
@@ -46,3 +47,20 @@ class ButtonBlock(StructBlock):
     class Meta:
         template = 'blocks/button_block.html'
         icon = 'doc-full'
+
+def render(self):
+    class LinkBlock(StructBlock):
+        title = CharBlock()
+        link = URLBlock()
+
+    block = ListBlock(LinkBlock())
+    return block.render([
+        {
+            'title': "Wagtail",
+            'link': 'http://www.wagtail.io',
+        },
+        {
+            'title': "Django",
+            'link': 'http://www.djangoproject.com',
+        },
+    ]) 
