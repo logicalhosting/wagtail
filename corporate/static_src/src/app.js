@@ -1,21 +1,25 @@
 import {MDCTopAppBar} from '@material/top-app-bar';
+import {MDCDrawer} from "@material/drawer";
 import {MDCCheckbox} from '@material/checkbox';
-import {MDCChipSet} from '@material/chips';
+import {MDCChipSet} from '@material/chips/chip-set';
 import {MDCDataTable} from '@material/data-table';
 import {MDCFormField} from '@material/form-field';
 import {MDCList} from "@material/list";
 import {MDCRadio} from '@material/radio';
 import {MDCRipple} from '@material/ripple';
-import {MDCTabBar} from '@material/tab-bar';
 import {MDCTextField} from '@material/textfield';
 
-const topAppBarElement = document.querySelector('.mdc-top-app-bar');
-const topAppBar = new MDCTopAppBar(topAppBarElement);
-const dataTable = new MDCDataTable(document.querySelector('.mdc-data-table'));
-// const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+const topAppBar = new MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
+const drawer = new MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+
+topAppBar.listen('MDCTopAppBar:nav', () => {
+  drawer.open = !drawer.open;
+});
+
+const dataTable = new MDCDataTable(document.querySelectorAll('.mdc-data-table'));
+
 const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
-const fabRipple = new MDCRipple(document.querySelector('.mdc-fab'));
-const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
+
 const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
 
 const list = MDCList.attachTo(document.querySelector('.mdc-list'));
@@ -34,3 +38,4 @@ formField.input = checkbox;
 
 const chipSetEl = document.querySelector('.mdc-chip-set');
 const chipSet = new MDCChipSet(chipSetEl);
+

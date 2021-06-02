@@ -1,7 +1,18 @@
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-    entry: ['./src/scss/main.scss'],
+    entry: ['./src/scss/main.scss', './src/app.js'],
+    output: {
+        filename: '../../static/js/bundle.js',
+    },
+    devtool: 'source-map',
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+            }
+        ]
+    },
     mode: 'development',
     module: {
         rules: [
@@ -32,9 +43,10 @@ module.exports = {
                     {
                         loader: 'sass-loader',
                         options: {
+                            webpackImporter: false,
                             sassOptions: {
                                 implementation: require('sass'),
-                                includePaths: ['node_modules'],
+                                includePaths: ['./node_modules'],
                             },
                         },
                     }
