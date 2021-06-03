@@ -11617,16 +11617,16 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./src/app.js ***!
   \********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _material_top_app_bar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @material/top-app-bar */ "./node_modules/@material/top-app-bar/component.js");
-/* harmony import */ var _material_drawer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/drawer */ "./node_modules/@material/drawer/component.js");
-/* harmony import */ var _material_checkbox__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material/checkbox */ "./node_modules/@material/checkbox/component.js");
-/* harmony import */ var _material_chips_chip_set__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material/chips/chip-set */ "./node_modules/@material/chips/chip-set/component.js");
-/* harmony import */ var _material_data_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/data-table */ "./node_modules/@material/data-table/component.js");
-/* harmony import */ var _material_form_field__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material/form-field */ "./node_modules/@material/form-field/component.js");
-/* harmony import */ var _material_list__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material/list */ "./node_modules/@material/list/component.js");
-/* harmony import */ var _material_radio__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material/radio */ "./node_modules/@material/radio/component.js");
-/* harmony import */ var _material_ripple__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material/ripple */ "./node_modules/@material/ripple/component.js");
-/* harmony import */ var _material_textfield__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material/textfield */ "./node_modules/@material/textfield/component.js");
+/* harmony import */ var _material_top_app_bar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/top-app-bar */ "./node_modules/@material/top-app-bar/component.js");
+/* harmony import */ var _material_drawer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/drawer */ "./node_modules/@material/drawer/component.js");
+/* harmony import */ var _material_checkbox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material/checkbox */ "./node_modules/@material/checkbox/component.js");
+/* harmony import */ var _material_chips_chip_set__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material/chips/chip-set */ "./node_modules/@material/chips/chip-set/component.js");
+/* harmony import */ var _material_form_field__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material/form-field */ "./node_modules/@material/form-field/component.js");
+/* harmony import */ var _material_list__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material/list */ "./node_modules/@material/list/component.js");
+/* harmony import */ var _material_radio__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material/radio */ "./node_modules/@material/radio/component.js");
+/* harmony import */ var _material_ripple__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @material/ripple */ "./node_modules/@material/ripple/component.js");
+/* harmony import */ var _material_textfield__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material/textfield */ "./node_modules/@material/textfield/component.js");
+/* harmony import */ var _material_data_table__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material/data-table */ "./node_modules/@material/data-table/component.js");
 
 
 
@@ -11638,36 +11638,41 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const topAppBar = new _material_top_app_bar__WEBPACK_IMPORTED_MODULE_0__.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
-const drawer = new _material_drawer__WEBPACK_IMPORTED_MODULE_1__.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+
+const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
+const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
+  return new _material_ripple__WEBPACK_IMPORTED_MODULE_0__.MDCRipple(el);
+});
+
+const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+const topAppBar = new _material_top_app_bar__WEBPACK_IMPORTED_MODULE_1__.MDCTopAppBar(topAppBarElement);
+const drawer = new _material_drawer__WEBPACK_IMPORTED_MODULE_2__.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
 
 topAppBar.listen('MDCTopAppBar:nav', () => {
   drawer.open = !drawer.open;
 });
 
-const dataTable = new _material_data_table__WEBPACK_IMPORTED_MODULE_2__.MDCDataTable(document.querySelectorAll('.mdc-data-table'));
-
-const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
-
-const textField = new _material_textfield__WEBPACK_IMPORTED_MODULE_3__.MDCTextField(document.querySelector('.mdc-text-field'));
-
-const list = _material_list__WEBPACK_IMPORTED_MODULE_4__.MDCList.attachTo(document.querySelector('.mdc-list'));
-list.wrapFocus = true;
-
-const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
-  return new _material_ripple__WEBPACK_IMPORTED_MODULE_5__.MDCRipple(el);
-});
-
-const radio = new _material_radio__WEBPACK_IMPORTED_MODULE_6__.MDCRadio(document.querySelector('.mdc-radio'));
-const formField = new _material_form_field__WEBPACK_IMPORTED_MODULE_7__.MDCFormField(document.querySelector('.mdc-form-field'));
+const radio = new _material_radio__WEBPACK_IMPORTED_MODULE_3__.MDCRadio(document.querySelector('.mdc-radio'));
+const formField = new _material_form_field__WEBPACK_IMPORTED_MODULE_4__.MDCFormField(document.querySelector('.mdc-form-field'));
 formField.input = radio;
 
-const checkbox = new _material_checkbox__WEBPACK_IMPORTED_MODULE_8__.MDCCheckbox(document.querySelector('.mdc-checkbox'));
+const checkbox = new _material_checkbox__WEBPACK_IMPORTED_MODULE_5__.MDCCheckbox(document.querySelector('.mdc-checkbox'));
 formField.input = checkbox;
 
-const chipSetEl = document.querySelector('.mdc-chip-set');
-const chipSet = new _material_chips_chip_set__WEBPACK_IMPORTED_MODULE_9__.MDCChipSet(chipSetEl);
+const chipSetEl = '.mdc-chip-set'; 
+const chipSet = [].map.call(document.querySelectorAll(chipSetEl), function(el) {
+  return new _material_chips_chip_set__WEBPACK_IMPORTED_MODULE_6__.MDCChipSet(el);
+});
 
+const list = _material_list__WEBPACK_IMPORTED_MODULE_7__.MDCList.attachTo(document.querySelector('.mdc-list'));
+list.wrapFocus = true;
+
+const textFieldEl = '.mdc-text-field'; 
+const textField = [].map.call(document.querySelectorAll(textFieldEl), function(el) {
+  return new _material_textfield__WEBPACK_IMPORTED_MODULE_8__.MDCTextField(el);
+});
+
+const dataTable = new _material_data_table__WEBPACK_IMPORTED_MODULE_9__.MDCDataTable(document.querySelector('.mdc-data-table'));
 
 })();
 

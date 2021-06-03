@@ -213,7 +213,7 @@ Delete the line below if you're just getting started and want to remove the welc
 <section class="section lps-wrapper-text-one">
   <h2 class="mdc-typography--headline2 lps-fixed-header-space">Form fields</h2>
 
-  <label class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
+  <label class="mdc-text-field mdc-text-field--outlined">
     <span class="mdc-notched-outline">
       <span class="mdc-notched-outline__leading"></span>
       <span class="mdc-notched-outline__notch">
@@ -224,7 +224,7 @@ Delete the line below if you're just getting started and want to remove the welc
     <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
   </label>
 
-  <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon" data-mdc-auto-init="MDCTextField">
+  <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon">
     <i class="material-icons mdc-text-field__icon">visibility</i>
     <input class="mdc-text-field__input" id="text-field-hero-input">
     <div class="mdc-notched-outline">
@@ -260,7 +260,7 @@ Delete the line below if you're just getting started and want to remove the welc
       <div class="mdc-checkbox">
         <input type="checkbox"
               class="mdc-checkbox__native-control"
-              id="checkbox-1"/>
+              id="checkbox-2"/>
         <div class="mdc-checkbox__background">
           <svg class="mdc-checkbox__checkmark"
               viewBox="0 0 24 24">
@@ -273,7 +273,7 @@ Delete the line below if you're just getting started and want to remove the welc
         <div class="mdc-checkbox__ripple"></div>
       </div>
     </div>
-    <label for="checkbox-1">Checkbox 1</label>
+    <label for="checkbox-2">Checkbox 2</label>
   </div>
 
   <div class="mdc-touch-target-wrapper">
@@ -295,7 +295,7 @@ Delete the line below if you're just getting started and want to remove the welc
       <div class="mdc-checkbox__ripple"></div>
     </div>
     </div>
-    <label for="basic-disabled-checkbox" id="basic-disabled-checkbox-label">Disabled checkbox</label>
+    <label for="basic-disabled-checkbox" id="basic-disabled-checkbox-label">Disabled</label>
   </div>
 </section>
 
@@ -467,7 +467,8 @@ Delete the line below if you're just getting started and want to remove the welc
   <section class="section lps-wrapper-text-one">
     <h2 class="mdc-typography--headline2 lps-fixed-header-space">Chips</h2>
     <p>We need to get back to this as it's breaking on webpack builds.</p>
-    <div class="mdc-chip-set" role="grid">
+ 
+    <div class="mdc-chip-set" role="grid" data-mdc-auto-init="MDCChipSet">
       <div class="mdc-chip" role="row">
         <div class="mdc-chip__ripple"></div>
         <span role="gridcell">
@@ -691,80 +692,7 @@ Delete the line below if you're just getting started and want to remove the welc
       </tbody>
     </table>
   </div>
-
-  <div class="mdc-data-table__pagination">
-    <div class="mdc-data-table__pagination-trailing">
-      <div class="mdc-data-table__pagination-rows-per-page">
-        <div class="mdc-data-table__pagination-rows-per-page-label">
-          Rows per page
-        </div>
-
-        <div class="mdc-select mdc-select--outlined mdc-select--no-label mdc-data-table__pagination-rows-per-page-select">
-          <div class="mdc-select__anchor" role="button" aria-haspopup="listbox"
-                aria-labelledby="demo-pagination-select" tabindex="0">
-            <span class="mdc-select__selected-text-container">
-              <span id="demo-pagination-select" class="mdc-select__selected-text">10</span>
-            </span>
-            <span class="mdc-select__dropdown-icon">
-              <svg
-                  class="mdc-select__dropdown-icon-graphic"
-                  viewBox="7 10 10 5">
-                <polygon
-                    class="mdc-select__dropdown-icon-inactive"
-                    stroke="none"
-                    fill-rule="evenodd"
-                    points="7 10 12 15 17 10">
-                </polygon>
-                <polygon
-                    class="mdc-select__dropdown-icon-active"
-                    stroke="none"
-                    fill-rule="evenodd"
-                    points="7 15 12 10 17 15">
-                </polygon>
-              </svg>
-            </span>
-            <span class="mdc-notched-outline mdc-notched-outline--notched">
-              <span class="mdc-notched-outline__leading"></span>
-              <span class="mdc-notched-outline__trailing"></span>
-            </span>
-          </div>
-
-          <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" role="listbox">
-            <ul class="mdc-list">
-              <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" role="option" data-value="10">
-                <span class="mdc-list-item__text">10</span>
-              </li>
-              <li class="mdc-list-item" role="option" data-value="25">
-                <span class="mdc-list-item__text">25</span>
-              </li>
-              <li class="mdc-list-item" role="option" data-value="100">
-                <span class="mdc-list-item__text">100</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="mdc-data-table__pagination-navigation">
-        <div class="mdc-data-table__pagination-total">
-          1‑10 of 100
-        </div>
-        <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-first-page="true" disabled>
-          <div class="mdc-button__icon">first_page</div>
-        </button>
-        <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-prev-page="true" disabled>
-          <div class="mdc-button__icon">chevron_left</div>
-        </button>
-        <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-next-page="true">
-          <div class="mdc-button__icon">chevron_right</div>
-        </button>
-        <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-last-page="true">
-          <div class="mdc-button__icon">last_page</div>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
+ </div>
 <br><br>
 
   <div class="mdc-data-table" data-mdc-auto-init="MDCDataTable">

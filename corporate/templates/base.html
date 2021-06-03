@@ -25,7 +25,7 @@
         {# Global stylesheets #}
         <link rel="stylesheet" href="{% static 'css/bundle.css' %}" />
          {# Global javascript #}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/11.0.0/material-components-web.min.js" integrity="sha512-oEIwIw0lBpt7kQn5OnE/5Hp5/SI/UbmBmrXj5EDeJSe2pYhGkyZhyCrxfrcjVytr5BPeylirRhPlSwoOMMNhKg==" crossorigin="anonymous"></script>
+        <script src="{% static 'js/bundle.js' %}" async defer></script>
 
         {% block extra_css %}
         			:root {
@@ -86,23 +86,7 @@
         {% include "includes/footer.html" %}
         {# Global javascript #}
         {% block extra_js %}
-     <!-- at the bottom of the page -->
-        <script>
-        const buttons = document.querySelectorAll('.mdc-button');
-        for (const button of buttons) {   
-            mdc.ripple.MDCRipple.attachTo(button);
-        };
-        const fabs = document.querySelectorAll('.mdc-fab');
-        for (const fab of fabs) {   
-            mdc.ripple.MDCRipple.attachTo(fab);
-        };
-        const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
-        const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
-        topAppBar.listen('MDCTopAppBar:nav', () => {
-            drawer.open = !drawer.open;
-        });
-        window.mdc.autoInit();
-        </script> 
+     		<!-- at the bottom of the page -->
         {% endblock %}
     </body>
 </html>
