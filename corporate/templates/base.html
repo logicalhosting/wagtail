@@ -18,44 +18,65 @@
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         {# Global stylesheets #}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/11.0.0/material-components-web.css" integrity="sha512-Eg6eqFxtUB0BwHHsPj44aIQYa4evUUd8SyjsQKDx2j4il9WbfZFMb9TBM1iz5aZSHtr1jE4qUrkFPnN9qzyS+g==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="{% static 'css/bundle.css' %}" />
          {# Global javascript #}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/11.0.0/material-components-web.min.js" integrity="sha512-oEIwIw0lBpt7kQn5OnE/5Hp5/SI/UbmBmrXj5EDeJSe2pYhGkyZhyCrxfrcjVytr5BPeylirRhPlSwoOMMNhKg==" crossorigin="anonymous"></script>
+        <script src="{% static 'js/bundle.js' %}" async defer></script>
 
         {% block extra_css %}
-        :root {
-            --mdc-theme-primary: #212121;
-            --mdc-theme-secondary: #000;
-            --mdc-theme-background: #fff;
-            --mdc-theme-surface: #fff;
-            --mdc-theme-error: #d32f2f;
-            --mdc-theme-on-primary: #fff;
-            --mdc-theme-on-secondary: #fff;
-            --mdc-theme-on-surface: #000;
-            --mdc-theme-on-error: #fff;
-            --mdc-theme-text-primary-on-background: rgba(0, 0, 0, 0.87);
-            --mdc-theme-text-secondary-on-background: rgba(0, 0, 0, 0.54);
-            --mdc-theme-text-hint-on-background: rgba(0, 0, 0, 0.38);
-            --mdc-theme-text-disabled-on-background: rgba(0, 0, 0, 0.38);
-            --mdc-theme-text-icon-on-background: rgba(0, 0, 0, 0.38);
-            --mdc-theme-text-primary-on-light: rgba(0, 0, 0, 0.87);
-            --mdc-theme-text-secondary-on-light: rgba(0, 0, 0, 0.54);
-            --mdc-theme-text-hint-on-light: rgba(0, 0, 0, 0.38);
-            --mdc-theme-text-disabled-on-light: rgba(0, 0, 0, 0.38);
-            --mdc-theme-text-icon-on-light: rgba(0, 0, 0, 0.38);
-            --mdc-theme-text-primary-on-dark: white;
-            --mdc-theme-text-secondary-on-dark: rgba(255, 255, 255, 0.7);
-            --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
-            --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
-            --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
-            }
+        			:root {
+				/* Theme color vars */
+				--mdc-theme-primary: #121212;
+				--mdc-theme-primary-rgb: 18,18,18;
+				--mdc-theme-on-primary: #ffffff;
+				--mdc-theme-on-primary-rgb: 255,255,255;
+				--mdc-theme-secondary: #9575cd;
+				--mdc-theme-secondary-rgb: 149,117,205;
+				--mdc-theme-on-secondary: #ffffff;
+				--mdc-theme-on-secondary-rgb: 255,255,255;
+				--mdc-theme-surface: #ffffff;
+				--mdc-theme-surface-rgb: 255,255,255;
+				--mdc-theme-on-surface: #000000;
+				--mdc-theme-on-surface-rgb: 0,0,0;
+				--mdc-theme-surface-mix-4: #f5f5f5;
+				--mdc-theme-surface-mix-12: #e0e0e0;
+
+				/* Icon collection type var */
+				--mdc-icons-font-family: "Material Icons";
+
+				/* Typography vars */
+				--mdc-typography-headline1-font-family: "Roboto", sans-serif;
+				--mdc-typography-headline2-font-family: "Roboto", sans-serif;
+				--mdc-typography-headline3-font-family: "Roboto", sans-serif;
+				--mdc-typography-headline4-font-family: "Roboto", sans-serif;
+				--mdc-typography-headline5-font-family: "Roboto", sans-serif;
+				--mdc-typography-headline6-font-family: "Roboto", sans-serif;
+				--mdc-typography-subtitle1-font-family: "Roboto", sans-serif;
+				--mdc-typography-subtitle2-font-family: "Roboto", sans-serif;
+				--mdc-typography-font-family: "Roboto", sans-serif;
+				--mdc-typography-body1-font-family: "Roboto", sans-serif;
+				--mdc-typography-body2-font-family: "Roboto", sans-serif;
+				--mdc-typography-caption-font-family: "Roboto", sans-serif;
+				--mdc-typography-button-font-family: "Roboto", sans-serif;
+				--mdc-typography-overline-font-family: "Roboto", sans-serif;
+
+				/* Corner Styles vars */
+				--mdc-button-radius: 0px;
+				--mdc-card-radius: 0px;
+				--mdc-chip-radius: 0px;
+				--mdc-data-table-radius: 0px;
+				--mdc-image-list-radius: 0px;
+				--mdc-nav-drawer-radius: 0px;
+				--mdc-text-field-radius: 0px;
+			}
         {% endblock %}
     </head>
 
-    <body id="main-content" class="{% block body_class %}{% endblock %} mdc-typography">
+    <body id="main-content" class="{% block body_class %}{% endblock %}">
         {% include "includes/navbar.html" %}
 
         {% wagtailuserbar %}      
@@ -65,18 +86,7 @@
         {% include "includes/footer.html" %}
         {# Global javascript #}
         {% block extra_js %}
-     <!-- at the bottom of the page -->
-        <script>
-        const buttons = document.querySelectorAll('.mdc-button');
-        for (const button of buttons) {   
-            mdc.ripple.MDCRipple.attachTo(button);
-        };
-        const fabs = document.querySelectorAll('.mdc-fab');
-        for (const fab of fabs) {   
-            mdc.ripple.MDCRipple.attachTo(fab);
-        };
-        window.mdc.autoInit();
-        </script> 
+     		<!-- at the bottom of the page -->
         {% endblock %}
     </body>
 </html>
