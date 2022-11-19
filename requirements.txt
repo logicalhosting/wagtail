@@ -1,5 +1,5 @@
 Django>=3.2,<3.8
-wagtail>=2.13,<2.14
+wagtail>=2.15.2,<2.14
 django-sslserver>=0.22,<0.32
 django-tailwind>=1.1.2,<1.2
 django-redis>=4.12.1,<4.13
@@ -7,3 +7,4 @@ psycopg2-binary>=2.8.6,<2.8.7
 django-storages[google]>=1.11.1,<1.12
 wagtailsvg>=0.0.14,<0.1
 wagtailcolumnblocks>=2.2.0,<2.3
+pillow>=9.2.0 # not directly required, pinned by Snyk to avoid a vulnerability
