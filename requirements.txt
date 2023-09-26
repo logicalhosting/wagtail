@@ -7,3 +7,4 @@ psycopg2-binary>=2.8.6,<2.8.7
 django-storages[google]>=1.11.1,<1.12
 wagtailsvg>=0.0.14,<0.1
 wagtailcolumnblocks>=2.2.0,<2.3
+pillow>=10.0.1 # not directly required, pinned by Snyk to avoid a vulnerability
