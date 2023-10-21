@@ -1,5 +1,5 @@
 Django>=3.2,<3.8
-wagtail>=2.13,<2.14
+wagtail>=4.1.9,<2.14
 django-sslserver>=0.22,<0.32
 django-tailwind>=1.1.2,<1.2
 django-redis>=4.12.1,<4.13
